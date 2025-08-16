@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -39,10 +40,10 @@ fun HomeScreen() {
                 verticalArrangement = Arrangement.Top
             ) {
                 Row (
-                    horizontalArrangement = Arrangement.spacedBy(8.dp), // small gap
-                    verticalAlignment = Alignment.CenterVertically
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    modifier = Modifier.fillMaxSize()
                 ){
-                    MyIconButton()
+                    MyIconButton(icon = Icons.Default.MoreVert)
                     Column (
                         horizontalAlignment = Alignment.CenterHorizontally
                     ){
@@ -57,6 +58,7 @@ fun HomeScreen() {
                             fontSize = 12.sp
                         )
                     }
+                    MyIconButton(icon = Icons.Default.Add)
                 }
             }
         },

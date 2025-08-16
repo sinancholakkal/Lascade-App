@@ -13,10 +13,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun MyIconButton() {
+fun MyIconButton(icon: ImageVector) {
     IconButton(
         onClick = { },
         modifier = Modifier
@@ -25,7 +26,7 @@ fun MyIconButton() {
             .background(Color(0x2B2C2FB2))
     ) {
         Icon(
-            imageVector = Icons.Default.MoreVert,
+            imageVector = icon,
             contentDescription = "MoreButton",
             tint = Color.White
         )
