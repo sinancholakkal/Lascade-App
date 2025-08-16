@@ -16,6 +16,6 @@ import androidx.compose.ui.unit.dp
         contentDescription = "",
         modifier = Modifier
             .size(width = width, height = height)
-            .padding(start =ps, bottom = pb, end = pe, top = pt )
+
     )
 }
