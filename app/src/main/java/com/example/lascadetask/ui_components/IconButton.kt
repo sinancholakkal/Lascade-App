@@ -17,13 +17,13 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun MyIconButton(icon: ImageVector) {
+fun MyIconButton(icon: ImageVector,onClick:()->Unit ={}) {
     IconButton(
-        onClick = { },
+        onClick = onClick,
         modifier = Modifier
             .size(48.dp)
             .clip(CircleShape)
-            .background(Color(0x2B2C2FB2))
+            .background(Color.DarkGray.copy(alpha =0.5f))
     ) {
         Icon(
             imageVector = icon,
