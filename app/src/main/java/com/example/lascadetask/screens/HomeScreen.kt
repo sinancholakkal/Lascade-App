@@ -38,6 +38,7 @@ fun HomeScreen() {
             when(currentSheet.value){
                 1-> FirstSheetContent(currentSheet)
                 2-> RouterSettingsSheetContent(currentSheet)
+
             }
         },
         sheetPeekHeight = 170.dp,
@@ -48,7 +49,6 @@ fun HomeScreen() {
         Box(modifier = Modifier
             .fillMaxSize()
             .padding(paddingValues)) {
-
             Image(
                 painter = painterResource(id = R.drawable.map_image),
                 contentDescription = "Map Image",
