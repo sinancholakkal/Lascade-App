@@ -56,7 +56,9 @@ fun RouterSettingsSheetContent(currentSheet: MutableState<Int>){
             MyElevatedButton(text = "Delete", bgColor = Color.Red, onClick = {
                 currentSheet.value = 3
             })
-            MyElevatedButton(text = "Save", tColor = Color.White, bgColor = Color.DarkGray.copy(alpha =0.5f))
+            MyElevatedButton(text = "Save", tColor = Color.White, bgColor = Color.DarkGray.copy(alpha =0.5f), onClick = {
+                currentSheet.value = 4
+            })
             MyElevatedButton(text = "Load", tColor = Color.White,  bgColor = Color.DarkGray.copy(alpha =0.5f))
         }
     }
