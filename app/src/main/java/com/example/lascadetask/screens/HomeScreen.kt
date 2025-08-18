@@ -1,5 +1,7 @@
 package com.example.lascadetask.screens
 
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -41,15 +43,17 @@ fun HomeScreen() {
     //BottomSheet-----
     BottomSheetScaffold(
         sheetContent = {
-            when(currentSheet.value){
-                1-> FirstSheetContent(currentSheet)
-                2-> RouterSettingsSheetContent(currentSheet)
-                3-> DeleteRouteSheet(currentSheet)
-                4-> SaveRouteSheet(currentSheet)
-                5-> LoadRouteSheet(currentSheet)
-                6-> AddLocationSheet(currentSheet)
-                7-> StreetViewSheet(currentSheet)
-                8-> SavedRouteSheet(currentSheet)
+            Crossfade(targetState = currentSheet.value, label = "SheetCrossfade",animationSpec = tween(durationMillis = 900)) { sheet ->
+                when (sheet) {
+                    1 -> FirstSheetContent(currentSheet)
+                    2 -> RouterSettingsSheetContent(currentSheet)
+                    3 -> DeleteRouteSheet(currentSheet)
+                    4 -> SaveRouteSheet(currentSheet)
+                    5 -> LoadRouteSheet(currentSheet)
+                    6 -> AddLocationSheet(currentSheet)
+                    7 -> StreetViewSheet(currentSheet)
+                    8 -> SavedRouteSheet(currentSheet)
+                }
             }
         },
         sheetPeekHeight = 170.dp,
