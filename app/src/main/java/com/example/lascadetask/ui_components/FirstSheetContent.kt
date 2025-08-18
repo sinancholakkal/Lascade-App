@@ -71,7 +71,9 @@ import androidx.compose.ui.unit.sp
                 )
             }
             //Add icon button
-            MyIconButton(icon = Icons.Default.Add)
+            MyIconButton(icon = Icons.Default.Add, onClick = {
+                currentSheet.value = 6
+            })
         }
         Box(
             modifier = Modifier
