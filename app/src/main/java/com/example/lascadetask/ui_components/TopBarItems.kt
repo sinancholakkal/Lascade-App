@@ -5,13 +5,14 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.lascadetask.R
 
 @Composable
-fun TopBarItems() {
+fun TopBarItems(currentSheet: MutableState<Int>) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -24,7 +25,9 @@ fun TopBarItems() {
             horizontalArrangement = Arrangement.Start,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            ImgButtonFun(width = 90.dp, height = 90.dp, resId = R.drawable.img_1)
+            ImgButtonFun(width = 90.dp, height = 90.dp, resId = R.drawable.img_1, onClick ={
+                currentSheet.value = 7
+            } )
             ImgButtonFun(width = 90.dp, height = 90.dp, resId = R.drawable.img_2)
         }
     }

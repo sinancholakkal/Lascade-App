@@ -14,14 +14,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun MyIconButton(icon: ImageVector,onClick:()->Unit ={},bgColor:Color = Color.DarkGray.copy(alpha =0.5f),iColor: Color=Color.White ) {
+fun MyIconButton(size:Dp=48.dp, icon: ImageVector,onClick:()->Unit ={},bgColor:Color = Color.DarkGray.copy(alpha =0.5f),iColor: Color=Color.White ) {
     IconButton(
         onClick = onClick,
         modifier = Modifier
-            .size(48.dp)
+            .size(size)
             .clip(CircleShape)
             .background(color = bgColor)
     ) {

@@ -2,6 +2,7 @@ package com.example.lascadetask.ui_components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -72,7 +73,10 @@ fun AddLocationSheet(currentSheet: MutableState<Int>){
                 Column (
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(16.dp),
+                        .padding(16.dp)
+                        .clickable {
+                            currentSheet.value = 1
+                        },
                     horizontalAlignment = Alignment.Start
                 ){
                     Text(item.location, color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold)

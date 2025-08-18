@@ -79,7 +79,8 @@ fun SaveRouteSheet(currentSheet: MutableState<Int>){
                 width = 400.dp,
                 tSize = 18.sp,
                 onClick = {
-                    currentSheet.value = 1
+                    //currentSheet.value = 1
+                    currentSheet.value = 8
                 }
             )
         }

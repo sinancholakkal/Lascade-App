@@ -26,6 +26,8 @@ import com.example.lascadetask.ui_components.FirstSheetContent
 import com.example.lascadetask.ui_components.LoadRouteSheet
 import com.example.lascadetask.ui_components.RouterSettingsSheetContent
 import com.example.lascadetask.ui_components.SaveRouteSheet
+import com.example.lascadetask.ui_components.SavedRouteSheet
+import com.example.lascadetask.ui_components.StreetViewSheet
 import com.example.lascadetask.ui_components.TopBarItems
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -46,6 +48,8 @@ fun HomeScreen() {
                 4-> SaveRouteSheet(currentSheet)
                 5-> LoadRouteSheet(currentSheet)
                 6-> AddLocationSheet(currentSheet)
+                7-> StreetViewSheet(currentSheet)
+                8-> SavedRouteSheet(currentSheet)
             }
         },
         sheetPeekHeight = 170.dp,
@@ -63,7 +67,7 @@ fun HomeScreen() {
                 contentScale = ContentScale.Crop
             )
 
-            TopBarItems()
+            TopBarItems(currentSheet)
         }
     }
 }
