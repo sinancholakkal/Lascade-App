@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import com.example.lascadetask.R
 import com.example.lascadetask.ui_components.DeleteRouteSheet
 import com.example.lascadetask.ui_components.FirstSheetContent
+import com.example.lascadetask.ui_components.LoadRouteSheet
 import com.example.lascadetask.ui_components.RouterSettingsSheetContent
 import com.example.lascadetask.ui_components.SaveRouteSheet
 import com.example.lascadetask.ui_components.TopBarItems
@@ -33,7 +34,7 @@ fun HomeScreen() {
         initialValue = SheetValue.Expanded,
         skipHiddenState = true
     )                       
-    val currentSheet = remember { mutableIntStateOf(4) }
+    val currentSheet = remember { mutableIntStateOf(5) }
     //BottomSheet-----
     BottomSheetScaffold(
         sheetContent = {
@@ -42,6 +43,7 @@ fun HomeScreen() {
                 2-> RouterSettingsSheetContent(currentSheet)
                 3-> DeleteRouteSheet(currentSheet)
                 4-> SaveRouteSheet(currentSheet)
+                5-> LoadRouteSheet(currentSheet)
             }
         },
         sheetPeekHeight = 170.dp,
